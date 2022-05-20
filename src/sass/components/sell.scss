@@ -1,0 +1,28 @@
+.sell-dot { 
+    background: url('../../images/dot.png') repeat-x bottom;
+    flex-grow: 1;
+    margin: 0 10px;
+    background-position-y: 14px;
+  }
+  .sell-top__box > div {
+    margin-bottom: 20px;
+    flex: 1 1 18%;
+  }
+  .sell-top__box > div:not(:first-child) {
+    margin-left: 20px;
+  }
+  .report-title {
+      margin-top: -25px !important;
+  }
+  .report-title h4 {
+    font-size: 18px;
+    margin-left: 10px;
+  }
+  @media (max-width: 992px) {
+    .sell-top__box {
+        flex-direction: column;
+    }
+    .sell-top__box > div:not(:first-child) {
+        margin-left: 0px;
+      }
+  }

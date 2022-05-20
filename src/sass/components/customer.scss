@@ -1,0 +1,119 @@
+.customer {
+    padding-top: 100px;
+    margin: 0 50px;
+    .menu {
+        display: none;
+    }
+    &-number {
+        font-size: 35px;
+        font-weight: 400;
+    }
+
+    &-online {
+        p {
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+    }
+
+    &-statistical {
+        padding: 1.25rem 1.25rem;
+        background-color: #fff;
+        border: 1px solid #e9e9ef;
+    }
+
+    .card {
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid #f6f6f6;
+        border-radius: 0.25rem;
+        border: 1px solid #e9e9ef;
+    }
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+table.table>:not(:first-child) {
+    border-top: 2px solid #dee2e6;
+}
+thead tr th {
+    color: #3c3c3c !important;
+    font-weight: 500 !important;
+}
+tbody tr td{
+    color: #777;
+}
+@media(max-width: 992px) {
+    .customer {
+        .menu {
+            display: flex;
+            margin-bottom: 15px;
+        }
+        table thead {
+            display: none;
+        }
+
+        .table>:not(:first-child) {
+            border-top: 0;
+        }
+
+        .table-bordered>:not(caption)>* {
+            border: 1px solid #ddd;
+        }
+        
+        table tbody {
+            display: flex;
+            flex-direction: column;
+
+            tr {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 20px;
+
+                div {
+                    width: 70%;
+                    text-align: right;
+                    margin-left: auto;
+                    position: relative;
+
+                }
+
+                td {
+                    position: relative;
+
+                    &:before {
+                        content: attr(data-title);
+                        position: absolute;
+                        top: 0.5rem;
+                        // transform: translateY(-50%);
+                        left: 0.5rem;
+                        width: 30%;
+                    }
+
+                    &:not(:last-child) {
+                        border-bottom: 1px solid #ddd;
+                    }
+                }
+            }
+        }
+
+        .table-id {
+            display: none;
+        }
+    }
+    
+}
+@media(max-width: 576px) {
+    .customer {
+        margin: 0 15px;
+
+        table tbody tr td:before {
+            width: 40%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
